@@ -27,7 +27,7 @@ func GetConnection() (*gorm.DB, error) {
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
 	if err != nil {
-		panic("cannot connect to database")
+		panic(err.Error())
 	}
 
 	return db, nil
