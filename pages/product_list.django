@@ -1,0 +1,12 @@
+{% extends "layout.django" %}
+
+{% block content %}
+    <div>
+        {% for product in result %}
+        <div style="display: flex;">
+            {{ product.Name }}
+            {{ product.Price }}
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
